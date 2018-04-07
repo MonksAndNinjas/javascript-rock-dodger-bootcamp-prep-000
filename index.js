@@ -68,7 +68,15 @@ function endGame() {
   clearInterval(gameInterval)
   window.removeEventListener('keydown', moveDodger)
   for (i = 0; i < ROCKS.length; i++) {
+<<<<<<< HEAD
       ROCKS[i].remove()
+=======
+   // ROCKS.forEach(function(rock)
+     // {rock.remove()
+      //});
+      let rock = createRock(i)
+      ROCKS.push(rock.remove())
+>>>>>>> 34989453d22f55ccf76dcb7c3a0e892b29215e53
   }
   alert("YOU LOSE!")
 }
@@ -92,8 +100,13 @@ function moveDodgerLeft() {
   window.requestAnimationFrame(function() {
    if (left > 0) {
     dodger.style.left = `${left - 4}px`
+<<<<<<< HEAD
    }
   })
+=======
+  }
+   })
+>>>>>>> 34989453d22f55ccf76dcb7c3a0e892b29215e53
 }
 
 function moveDodgerRight() {
